@@ -13,8 +13,7 @@ type Student = {
   status: string
 }
 
-const API_URL = 'http://127.0.0.1:8000'
-
+const API_URL = "https://sms-app-za6b.onrender.com";
 function App() {
   const [students, setStudents] = useState<Student[]>([])
   const [showForm, setShowForm] = useState(false)
