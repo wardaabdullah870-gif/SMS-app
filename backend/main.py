@@ -17,19 +17,18 @@ app = FastAPI(title="Student Management API")
 # Create the FastAPI application
 app = FastAPI(title="Student Management API")
 
-# Allow the React frontend to communicate with the backend
+
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
-        "https://YOUR-VERCEL-DOMAIN.vercel.app",
+        "https://sms-4hkl4fsfu-student-management9.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
 )
-
 
 # Keep the database beside this Python file
 DATABASE = Path(__file__).resolve().parent / "students.db"
