@@ -13,11 +13,17 @@ app = FastAPI(title="Student Management API")
 
 
 # Allow the React frontend to communicate with the backend
+
+# Create the FastAPI application
+app = FastAPI(title="Student Management API")
+
+# Allow the React frontend to communicate with the backend
 app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
         "http://127.0.0.1:5173",
+        "https://YOUR-VERCEL-DOMAIN.vercel.app",
     ],
     allow_credentials=True,
     allow_methods=["*"],
